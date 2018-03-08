@@ -1,4 +1,4 @@
-package com.appsee.reactnative;
+ package com.appsee.reactnative;
 
 import android.app.Activity;
 import android.view.View;
@@ -133,7 +133,8 @@ public class AppseeReactPackage implements ReactPackage {
 					    hashMap.put(key, toHashMap(readableNativeMap.getMap(key)));
 					    break;
 				    case Array:
-					    hashMap.put(key, toArrayList(readableNativeMap.getArray(key)));
+                        ReadableNativeArray arr = (ReadableNativeArray) readableNativeMap.getArray(key);
+					    hashMap.put(key, arr);
 					    break;
 				    default:
 					    throw new IllegalArgumentException("Could not convert object with key: " + key + ".");
@@ -168,7 +169,8 @@ public class AppseeReactPackage implements ReactPackage {
 					    arrayList.add(toHashMap(readableNativeArray.getMap(i)));
 					    break;
 				    case Array:
-					    arrayList.add(toArrayList(readableNativeArray.getArray(i)));
+                        ReadableNativeArray arr = (ReadableNativeArray) readableNativeArray.getArray(i);
+					    arrayList.add(arr);
 					    break;
 				    default:
 					    throw new IllegalArgumentException("Could not convert object at index: " + i + ".");
