@@ -1,5 +1,7 @@
 # Appsee React Native Plugin
 
+⚠️ This is an unofficial and unmantained package mirror to update and fix the content of https://www.appsee.com/docs/ios/reactnative on GitHub and is outdated as of Jan 2019. Please avoid using this repo.
+
 ## Installation
 `npm install --save react-native-appsee`
 
