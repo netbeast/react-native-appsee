@@ -1,6 +1,6 @@
-#Appsee React Native Plugin
+# Appsee React Native Plugin
 
-##Installation
+## Installation
 `npm install --save react-native-appsee`
 
 `react-native link react-native-appsee`
